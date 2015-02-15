@@ -38,7 +38,12 @@ setopt AUTO_CD
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# newer php
-export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
+# newer php; only for OS X
+if [ $(uname) = "Darwin" ]; then
+	export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
+fi
 
-. ~/.aliases
+if [[ -f ~/.aliases || -h ~/.aliases ]]; then
+	. ~/.aliases
+fi
+
