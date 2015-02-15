@@ -60,6 +60,7 @@ map <Leader>n :NERDTreeToggle<CR>
 " solarized theme stuff
 let g:solarized_termtrans = 1
 colorscheme solarized
+set background=dark
 call togglebg#map("<F5>")
 
 " use powerline fancy symbols in airline
