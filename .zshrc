@@ -15,7 +15,7 @@ DEFAULT_USER="the23ua"
 export UPDATE_ZSH_DAYS=13
 
 # enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # change the command execution timestamp shown in the history command output.
 HIST_STAMPS="yyyy-mm-dd"
