@@ -84,6 +84,12 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
+" where to place backup and swapfiles
+set directory=~/.vim/tmpfiles
+set backupdir=~/.vim/tmpfiles
+" don't backup backups
+set backupskip=~/.vim/tmpfiles/*
+
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
