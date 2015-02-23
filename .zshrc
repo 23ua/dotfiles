@@ -32,6 +32,11 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR="vim"
 
+# set Java home on OS X
+if [ $(uname) = "Darwin" ]; then
+	export JAVA_HOME=$(/usr/libexec/java_home)
+fi
+
 # auto cd
 setopt AUTO_CD
 
