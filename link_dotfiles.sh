@@ -14,10 +14,14 @@ handle_file () {
 	fi
 
 	ln -s $(pwd)/$1 $home_folder/$1 && echo "$home_folder/$1 was linked"
+	
 }
 
 
 for dotfile in ".zshrc" ".vimrc" ".tmux.conf"; do
 	handle_file $dotfile
 done
+
+# create swap and tmp folder for vim
+mkdir ~/.vim/tmpfiles && echo "mkdir ~/.vim/tmpfiles"
 
