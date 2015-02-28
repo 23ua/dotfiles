@@ -23,5 +23,5 @@ for dotfile in ".zshrc" ".vimrc" ".tmux.conf"; do
 done
 
 # create swap and tmp folder for vim
-mkdir ~/.vim/tmpfiles && echo "mkdir ~/.vim/tmpfiles"
+mkdir -p ~/.vim/tmpfiles && echo "mkdir -p ~/.vim/tmpfiles"
 
