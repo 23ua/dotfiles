@@ -48,6 +48,11 @@ if [ $(uname) = "Darwin" ]; then
 	export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 fi
 
+# add haskell binaries to path
+if [ $(uname) = "Darwin" ]; then
+	export PATH="$HOME/Library/Haskell/bin:$PATH"
+fi
+
 if [[ -f ~/.aliases || -h ~/.aliases ]]; then
 	. ~/.aliases
 fi
