@@ -93,6 +93,9 @@ set backupdir=~/.vim/tmpfiles
 " don't backup backups
 set backupskip=~/.vim/tmpfiles/*
 
+" fix bug with crontab edit on OS X
+au BufEnter /private/tmp/crontab.* setl backupcopy=yes
+
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
