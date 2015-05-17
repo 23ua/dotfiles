@@ -1,3 +1,5 @@
+#!/bin/bash
+
 home_folder="$HOME"
 
 handle_file () {
