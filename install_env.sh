@@ -1,6 +1,9 @@
 #!/bin/bash
 echo "[!] vim and zsh must already be installed [!]"
 
+echo installing Vundle...
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 echo linking dotfiles...
 ./link_dotfiles.sh
 
