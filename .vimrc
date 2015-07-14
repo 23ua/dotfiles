@@ -31,6 +31,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/syntastic'
+Plugin 'jimenezrick/vimerl'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
