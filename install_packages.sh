@@ -32,15 +32,26 @@ echo "installing packages..."
 case "$lsb_dist" in
 	arch)
 
-	echo "sudo pacman -S vim zsh tmux"	
+	pkg_names="vim zsh tmux"	
 
-	sudo pacman -S vim zsh tmux
+	if command_exists sudo; then
+		sudo pacman -S $pkg_names
+	else
+		pacman -S $pkg_names
+	fi
+
 	exit 0
 	;;
 
 	ubuntu|debian|linuxmint|'elementary os'|kali)
 	
-	echo "sudo apt-get install vim zsh tmux"
+	pkg_names="vim zsh tmux"
+
+	if command_exists sudo; then
+		sudo apt-get install $pkg_names
+	else
+		apt-get install $pkg_names
+	fi
 
 	sudo apt-get install vim zsh tmux
 	exit 0
