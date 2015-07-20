@@ -35,8 +35,10 @@ case "$lsb_dist" in
 	pkg_names="vim zsh tmux"	
 
 	if command_exists sudo; then
+		sudo pacman -Syy
 		sudo pacman -S $pkg_names
 	else
+		pacman -Syy
 		pacman -S $pkg_names
 	fi
 
@@ -48,8 +50,10 @@ case "$lsb_dist" in
 	pkg_names="vim zsh tmux"
 
 	if command_exists sudo; then
+		sudo apt-get update
 		sudo apt-get install $pkg_names
 	else
+		apt-get update
 		apt-get install $pkg_names
 	fi
 
