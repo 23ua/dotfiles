@@ -32,7 +32,7 @@ echo "installing packages..."
 case "$lsb_dist" in
 	arch)
 
-	pkg_names="vim zsh tmux"
+	pkg_names="vim zsh tmux tig"
 	echo "packages to install: $pkg_names"
 
 	if command_exists sudo; then
@@ -47,8 +47,8 @@ case "$lsb_dist" in
 	;;
 
 	ubuntu|debian|linuxmint|'elementary os'|kali)
-	
-	pkg_names="vim zsh tmux"
+
+	pkg_names="vim zsh tmux tig"
 	echo "packages to install: $pkg_names"
 
 	if command_exists sudo; then
