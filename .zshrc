@@ -53,6 +53,11 @@ if [ $(uname) = "Darwin" ]; then
 	export PATH="$HOME/Library/Haskell/bin:$PATH"
 fi
 
+# fix problem with molokai vim theme under tmux
+if [ $(uname) = "Linux" ]; then
+    alias tmux="TERM=screen-256color-bce tmux"
+fi
+
 if [[ -f ~/.aliases || -h ~/.aliases ]]; then
 	. ~/.aliases
 fi
