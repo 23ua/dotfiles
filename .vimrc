@@ -43,6 +43,7 @@ Plugin 'FelikZ/ctrlp-py-matcher'
 
 " Erlang
 Plugin 'jimenezrick/vimerl'
+Plugin 'vim-erlang/vim-erlang-tags'
 
 " Haskell
 Plugin 'eagletmt/neco-ghc'

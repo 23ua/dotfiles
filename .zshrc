@@ -58,6 +58,8 @@ if [ $(uname) = "Linux" ]; then
     alias tmux="TERM=screen-256color-bce tmux"
 fi
 
+alias erltags="~/.vim/bundle/vim-erlang-tags/bin/vim-erlang-tags.erl"
+
 if [[ -f ~/.aliases || -h ~/.aliases ]]; then
 	. ~/.aliases
 fi
