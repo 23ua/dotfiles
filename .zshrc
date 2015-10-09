@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # locale
-export LC_ALL=en_US.UTF-8  
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # theme
@@ -56,6 +56,11 @@ fi
 # fix problem with molokai vim theme under tmux
 if [ $(uname) = "Linux" ]; then
     alias tmux="TERM=screen-256color-bce tmux"
+fi
+
+# fix ack perl package problem on arch linux
+if [ $(uname) = "Linux" ]; then
+    export PATH="$PATH:/usr/bin/vendor_perl"
 fi
 
 alias erltags="~/.vim/bundle/vim-erlang-tags/bin/vim-erlang-tags.erl"
