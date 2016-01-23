@@ -64,3 +64,7 @@ if [[ -f ~/.aliases || -h ~/.aliases ]]; then
 	. ~/.aliases
 fi
 
+
+source $HOME/.zshenv
+
+
