@@ -75,12 +75,6 @@ let g:gitgutter_sign_column_always = 1
 highlight clear SignColumn
 set number
 
-"" Disable arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
 "" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
