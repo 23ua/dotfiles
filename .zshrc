@@ -64,6 +64,8 @@ if [[ -f ~/.aliases || -h ~/.aliases ]]; then
 	. ~/.aliases
 fi
 
+alias py="python3"
+alias pyserv="python3 -m http.server"
 
 source $HOME/.zshenv
 
