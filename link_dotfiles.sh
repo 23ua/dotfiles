@@ -20,7 +20,7 @@ handle_file () {
 }
 
 
-for dotfile in ".zshrc" ".vimrc" ".tmux.conf"; do
+for dotfile in ".zshrc" ".vimrc" ".tmux.conf" ".zshenv"; do
 	handle_file $dotfile
 done
 
