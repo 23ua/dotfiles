@@ -16,11 +16,11 @@ handle_file () {
 	fi
 
 	ln -s $(pwd)/$1 $home_folder/$1 && echo "$home_folder/$1 was linked"
-	
+
 }
 
 
-for dotfile in ".zshrc" ".vimrc" ".tmux.conf" ".zshenv"; do
+for dotfile in ".zshrc" ".vimrc" ".tmux.conf" ".zshenv" ".ideavim"; do
 	handle_file $dotfile
 done
 
