@@ -4,6 +4,15 @@ command_exists() {
 	command -v "$@" > /dev/null 2>&1
 }
 
+ask_to_append_emacs_to_pkg_list() {
+  read -p "Wanna install emacs?" -n 1 -r
+  echo
+  if [[ $REPLY =~ ^[Yy]$ ]]
+  then
+    pkg_names="$pkg_names emacs"
+  fi
+}
+
 lsb_dist=''
 if command_exists lsb_release; then
 	lsb_dist="$(lsb_release -si)"
@@ -32,10 +41,13 @@ echo "installing packages..."
 case "$lsb_dist" in
 	arch)
 
-	pkg_names="vim zsh tmux tig"
-	echo "packages to install: $pkg_names"
+  pkg_names="vim zsh tmux tig"
 
-	if command_exists sudo; then
+  ask_to_append_emacs_to_pkg_list
+
+  echo "packages to install: $pkg_names"
+
+  if command_exists sudo; then
 		sudo pacman -Syy
 		sudo pacman -S $pkg_names
 	else
@@ -48,7 +60,10 @@ case "$lsb_dist" in
 
 	ubuntu|debian|linuxmint|'elementary os'|kali)
 
-	pkg_names="vim zsh tmux tig"
+  pkg_names="vim zsh tmux tig"
+
+  ask_to_append_emacs_to_pkg_list
+
 	echo "packages to install: $pkg_names"
 
 	if command_exists sudo; then
