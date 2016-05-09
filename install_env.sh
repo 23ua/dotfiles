@@ -17,6 +17,13 @@ echo installing vundle...
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
+read -p "Wanna install spacemacs? (y/N)" -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    echo installing spacemacs...
+    git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+fi
+
 echo env install done
 
 
