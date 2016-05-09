@@ -12,7 +12,8 @@ fi
 
 # theme
 if [ -n "$INSIDE_EMACS" ]; then
-    ZSH_THEME="theunraveler"
+    ZSH_THEME="pygmalion"
+    # ZSH_THEME="gentoo"
 else
     ZSH_THEME="agnoster"
 fi
