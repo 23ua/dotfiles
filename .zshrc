@@ -5,8 +5,18 @@ export ZSH=$HOME/.oh-my-zsh
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# fix emacs-zsh integration
+if [ -n "$INSIDE_EMACS" ]; then
+    export TERM=screen-256color
+fi
+
 # theme
-ZSH_THEME="agnoster"
+if [ -n "$INSIDE_EMACS" ]; then
+    ZSH_THEME="theunraveler"
+else
+    ZSH_THEME="agnoster"
+fi
+
 
 # default user for theme not to show user@host locally
 DEFAULT_USER="the23ua"
