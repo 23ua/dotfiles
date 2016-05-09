@@ -5,7 +5,7 @@ command_exists() {
 }
 
 ask_to_append_emacs_to_pkg_list() {
-  read -p "Wanna install emacs? (y/N)" -n 1 -r
+  read -p "Wanna install emacs? (y/N) " -n 1 -r
   echo
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
