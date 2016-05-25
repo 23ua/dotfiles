@@ -60,7 +60,7 @@ if [ $(uname) = "Darwin" ]; then
 fi
 
 # Add path for Haskell/stack builds
-export PATH="$PATH:~/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # fix problem with molokai vim theme under tmux
 if [ $(uname) = "Linux" ]; then
