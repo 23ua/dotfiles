@@ -59,6 +59,9 @@ if [ $(uname) = "Darwin" ]; then
 	export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 fi
 
+# Add path for Haskell/stack builds
+export PATH="$PATH:~/.local/bin"
+
 # fix problem with molokai vim theme under tmux
 if [ $(uname) = "Linux" ]; then
     alias tmux="TERM=screen-256color-bce tmux"
