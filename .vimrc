@@ -45,6 +45,9 @@ Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'jimenezrick/vimerl'
 Plugin 'vim-erlang/vim-erlang-tags'
 
+" Elixir
+Plugin 'slashmili/alchemist.vim'
+
 " Haskell
 Plugin 'eagletmt/neco-ghc'
 Plugin 'dag/vim2hs'
