@@ -20,7 +20,10 @@ handle_file () {
 }
 
 
-for dotfile in ".zshrc" ".vimrc" ".tmux.conf" ".zshenv" ".ideavimrc" ".spacemacs"; do
+echo "creating .xmonad folder in case it doesn't exist"
+mkdir -p ~/.xmonad
+
+for dotfile in ".zshrc" ".vimrc" ".tmux.conf" ".zshenv" ".ideavimrc" ".spacemacs" ".xbindkeysrc" ".xinitrc" ".xmobarrc" ".xmonad/xmonad.hs"; do
 	handle_file $dotfile
 done
 
