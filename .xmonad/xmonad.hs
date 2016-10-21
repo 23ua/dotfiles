@@ -12,6 +12,7 @@ import Data.Monoid
 import System.Exit
 import XMonad.Hooks.DynamicLog
 import XMonad.Layout.NoBorders
+import XMonad.Hooks.SetWMName
 
 
 import qualified XMonad.StackSet as W
@@ -246,7 +247,7 @@ myLogHook = return ()
 -- per-workspace layout choices.
 --
 -- By default, do nothing.
-myStartupHook = return ()
+myStartupHook = setWMName "LG3D"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
