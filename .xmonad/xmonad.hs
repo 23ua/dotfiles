@@ -13,6 +13,8 @@ import System.Exit
 import XMonad.Hooks.DynamicLog
 import XMonad.Layout.NoBorders
 import XMonad.Hooks.SetWMName
+import XMonad.Layout.MultiToggle
+import XMonad.Layout.MultiToggle.Instances
 
 
 import qualified XMonad.StackSet as W
@@ -126,6 +128,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --
     -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
 
+    -- Map menu key to toggle fullscreen latout
+    , ((noModMask         , xK_Menu  ), sendMessage $ Toggle FULL)
+
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
 
@@ -185,7 +190,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = smartBorders $ tiled ||| Mirror tiled ||| Full
+myLayout = smartBorders $ fullScreenToggle $ tiled ||| Mirror tiled ||| Full
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -198,6 +203,9 @@ myLayout = smartBorders $ tiled ||| Mirror tiled ||| Full
 
      -- Percent of screen to increment by when resizing panes
      delta   = 3/100
+
+     -- Toggle fullscreen layout
+     fullScreenToggle = mkToggle (NOBORDERS ?? FULL ?? EOT)
 
 ------------------------------------------------------------------------
 -- Window rules:
