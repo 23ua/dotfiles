@@ -70,8 +70,16 @@
   Alt + space
 
 "xsecurelock"
-  Mod4 + l
+  Alt + l
 
+"pactl set-sink-volume $(pactl list short sinks | grep -i running | cut -f 1) +5%"
+  F12
+
+"pactl set-sink-volume $(pactl list short sinks | grep -i running | cut -f 1) -5%"
+  F11
+
+"pactl set-sink-mute $(pactl list short sinks | grep -i running | cut -f 1) toggle"
+  Pause
 
 ##################################
 # End of xbindkeys configuration #
