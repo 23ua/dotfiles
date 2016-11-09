@@ -333,4 +333,5 @@ let g:airline#extensions#tagbar#enabled = 1
 let erlang_folding = 0
 let erlang_show_errors = 1
 let g:erlang_tags_outfile = '.tags'
+set tags=.tags
 
