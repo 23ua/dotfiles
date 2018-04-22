@@ -39,7 +39,7 @@ plugins=(git colorize docker sublime httpie vi-mode jira)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR="vim"
 
@@ -55,9 +55,9 @@ setopt AUTO_CD
 # export ARCHFLAGS="-arch x86_64"
 
 # newer php; only for OS X
-if [ $(uname) = "Darwin" ]; then
-	export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
-fi
+#if [ $(uname) = "Darwin" ]; then
+#	export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
+#fi
 
 # Add path for Haskell/stack builds
 export PATH="$PATH:$HOME/.local/bin"
@@ -82,5 +82,5 @@ alias py="python3"
 alias pyserv="python3 -m http.server"
 
 source $HOME/.zshenv
-
+source ~/.iterm2_shell_integration.zsh
 

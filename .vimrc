@@ -59,6 +59,8 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'Yggdroot/indentLine'
 
+" goddamn PHP
+Plugin 'StanAngeloff/php.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
