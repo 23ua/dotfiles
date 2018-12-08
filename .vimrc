@@ -77,7 +77,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 "" left sign and number columns setup
-let g:gitgutter_sign_column_always = 1
+set signcolumn=yes
 highlight clear SignColumn
 set number
 
